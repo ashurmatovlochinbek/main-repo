@@ -1,9 +1,6 @@
 name: catch-notify
 
 on:
-  push:
-    branches:
-      - 'main'
   repository_dispatch:
     types:
       - catching-notify-update

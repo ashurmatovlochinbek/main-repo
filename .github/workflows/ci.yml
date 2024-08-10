@@ -1,0 +1,17 @@
+name: catch-notify
+
+on:
+  push:
+    branches:
+      - 'main'
+  repository_dispatch:
+    types:
+      - catching-notify-update
+
+jobs:
+  update-notify:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: log out notify
+        run: echo "Catching notify"
